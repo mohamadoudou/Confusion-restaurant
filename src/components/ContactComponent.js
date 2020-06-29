@@ -19,7 +19,7 @@ class Contact extends Component{
    
 
     handleSubmit(values){
-        alert('Current State is :' + JSON.stringify(values))
+        alert('Current State is :' + JSON.stringify(values));
     }
 
     render(){

@@ -14,6 +14,7 @@ class CommentForm extends Component{
                 this.state={
                   isModalOpen:false
                 };
+                this.FormValidator=this.FormValidator.bind(this);
             }
     toggleModal=()=>{
         this.setState({
@@ -23,7 +24,8 @@ class CommentForm extends Component{
 
     FormValidator=(values)=>{
         this.toggleModal();
-         alert(JSON.stringify(values));
+       // console.log(this.props.addComment(this.props.dishId, values.rating, values.author, values.comment));
+    this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
     render(){
         return (
@@ -42,7 +44,7 @@ class CommentForm extends Component{
                             <option>5</option>
                         </Control.select>
                         <Label htmlFor="name" >Your Name</Label>
-                        <Control.text model=".name" name="name" id="name"
+                        <Control.text model=".author" name="author" id="author"
                         placeholder="Your Name" className="form-control"
                         validators={{
                             required,
@@ -50,7 +52,7 @@ class CommentForm extends Component{
                             maxLength:maxLength(15)
                         }}/>
                         <Errors className="text-danger"
-                         model=".name" show="touched"
+                         model=".author" show="touched"
                          messages={{
                               required:"Required",
                               minLength:"Must be greater than 2 characters",
@@ -67,9 +69,9 @@ class CommentForm extends Component{
         ); 
 }
 }
- function RenderComments({comments}){
-        if(comments!=null){
-           const commentaire=comments.map((comment)=>{
+ function RenderComments(props){
+        if(props.comments!=null){
+           const commentaire=props.comments.map((comment)=>{
                 return(
                     <ul className="list-unstyled">
                         <li>{comment.comment}</li>
@@ -81,7 +83,7 @@ class CommentForm extends Component{
                 <div className="col-12 col-md-5 m-1">
                     <h4>Comments</h4>
                     {commentaire}
-                    <CommentForm/>
+                    <CommentForm dishId={props.dishId} addComment={props.addComment}/>
                 </div>
             );
         }
@@ -93,21 +95,23 @@ class CommentForm extends Component{
     }
 
 
-    function RenderDish({dish,comments}){
-        if(dish!=null){
+    function RenderDish(props){
+        if(props.dish!=null){
             return (
                 <div className="row">
                     <div  className="col-12 col-md-5 m-1">
                         
-                        <Card key={dish.id} >
-                            <CardImg top src={dish.image} alt={dish.name}/>
+                        <Card key={props.dish.id} >
+                            <CardImg top src={props.dish.image} alt={props.dish.name}/>
                             <CardBody>
-                                <CardTitle>{dish.name}</CardTitle>
-                                <CardText>{dish.description}</CardText>
+                                <CardTitle>{props.dish.name}</CardTitle>
+                                <CardText>{props.dish.description}</CardText>
                             </CardBody>
                         </Card>
                     </div>
-                    <RenderComments comments={comments}/>
+                    <RenderComments comments={props.comments}
+                     addComment={props.addComment}
+                     dishId={props.dishId}/>
                    
                 </div>
             );
@@ -132,7 +136,8 @@ class CommentForm extends Component{
                         <hr />
                     </div>                
                 </div>
-                <RenderDish dish={props.dish} comments={props.comments}/>
+                <RenderDish dish={props.dish} comments={props.comments}
+                addComment={props.addComment}  dishId={props.dish.id}/>
             </div>
         );
     }

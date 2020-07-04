@@ -27,7 +27,7 @@ class CommentForm extends Component{
     FormValidator=(values)=>{
         this.toggleModal();
        // console.log(this.props.addComment(this.props.dishId, values.rating, values.author, values.comment));
-    this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+    this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
     }
     render(){
         return (
@@ -85,7 +85,7 @@ class CommentForm extends Component{
                 <div className="col-12 col-md-5 m-1">
                     <h4>Comments</h4>
                     {commentaire}
-                    <CommentForm dishId={props.dishId} addComment={props.addComment}/>
+                    <CommentForm dishId={props.dishId} postComment={props.postComment}/>
                 </div>
             );
         }
@@ -130,7 +130,7 @@ class CommentForm extends Component{
                         </Card>
                     </div>
                     <RenderComments comments={props.comments}
-                     addComment={props.addComment}
+                     postComment={props.postComment}
                      dishId={props.dishId}/>
                    
                 </div>
@@ -157,7 +157,7 @@ class CommentForm extends Component{
                     </div>                
                 </div>
                 <RenderDish dish={props.dish} comments={props.comments}
-                addComment={props.addComment}  dishId={props.dish.id}/>
+                postComment={props.postComment}  dishId={props.dish.id}/>
             </div>
         );
     }

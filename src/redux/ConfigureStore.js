@@ -6,7 +6,7 @@ import { Dishes } from './dishes';
 import { Comments } from './comments';
 import { Promotions } from './promotions';
 import { Leaders } from './leaders';
-import {InitialFeedback} from './forms';
+import {InitialFeedback,addFeedback} from './forms';
 
 export const ConfigureStore=()=>{
   
@@ -17,6 +17,7 @@ export const ConfigureStore=()=>{
         comments:Comments,
         promotions:Promotions,
         leaders:Leaders,
+        addFeedback:addFeedback,
         ...createForms({feedback:InitialFeedback})
     }),
     applyMiddleware(thunk ,logger)

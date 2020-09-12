@@ -167,7 +167,8 @@ class CommentForm extends Component{
                     </div>                
                 </div>
                 <RenderDish dish={props.dish} comments={props.comments}
-                postComment={props.postComment}  dishId={props.dish.id}/>
+                postComment={props.postComment}  dishId={props.dish.id}
+                isLoading={props.isLoading} errMess={props.errMess}/>
             </div>
         );
     }

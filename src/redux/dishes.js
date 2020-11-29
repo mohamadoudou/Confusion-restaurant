@@ -7,7 +7,6 @@ switch(action.type){
     case ActionTypes.DISHES_LOADING:
         return {...state, isLoading: true, errMess: null, dishes: DISHES};
     case ActionTypes.DISHES_FAILED:
-        case ActionTypes.DISHES_FAILED:
             return {...state, isLoading: false, errMess: action.payload};
     default: return state;
 }

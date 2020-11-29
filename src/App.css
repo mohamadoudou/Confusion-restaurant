@@ -18,8 +18,8 @@
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
-    background: #9575CD ;
-    color:floralwhite;
+    background-color: #7538dd ;
+    color:rgb(87, 51, 153);
 }
 
 address{
@@ -52,4 +52,8 @@ address{
     opacity: 0.01;
     transform: translateX(100%);
     transition: all 300ms ease-out;
+}
+.image__size{
+    width: 100px;
+    height: 100px;
 }

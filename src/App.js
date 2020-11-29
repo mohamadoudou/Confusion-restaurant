@@ -1,9 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import Main from './components/MainComponent';
-import { DISHES} from './shared/dishes';
 import { BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/ConfigureStore';

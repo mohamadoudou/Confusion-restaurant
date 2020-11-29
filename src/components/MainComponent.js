@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import { Switch, Route, Redirect,withRouter} from 'react-router-dom';
 import{connect} from 'react-redux';
 import Menu from './MenuComponent';
@@ -12,7 +11,6 @@ import Home from './HomeComponent';
 import { postComment, fetchDishes, fetchComments, fetchPromos, fetchLeaders, postFeedback} from '../redux/ActionCreators';
 import { actions } from 'react-redux-form';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
-import { addFeedback } from '../redux/forms';
 
 const mapStateToProps=state=>{
  return{ dishes: state.dishes,
@@ -38,9 +36,6 @@ const mapDispatchToProps = dispatch => {
 
 class Main extends Component {
 
-  constructor(props) {
-    super(props);
-  }
   componentDidMount(){
     this.props.fetchDishes();
     this.props.fetchComments();

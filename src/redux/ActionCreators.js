@@ -1,6 +1,4 @@
 import * as ActionTypes from './ActionTypes';
-import { actionTypes } from 'react-redux-form';
-import { DISHES } from '../shared/dishes';
 import {baseUrl} from '../shared/baseUrl';
 
 export const fetchDishes=()=>(dispatch)=>{

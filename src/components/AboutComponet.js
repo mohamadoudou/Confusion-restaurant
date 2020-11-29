@@ -2,7 +2,7 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { baseUrl } from '../shared/baseUrl';
-import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import { Fade, Stagger } from 'react-animation-components';
 import {Loading} from "./LoadingComponent";
 
 
@@ -22,7 +22,7 @@ function RenderLeader({leader ,isLoading, errMess}){
     else {
     return ( 
        <Media key={leader.id} >
-           <Media object src={baseUrl+ leader.image} alt={leader.name} />
+           <Media object src={baseUrl+ leader.image} alt={leader.name} className="image__size"/>
            <Media body className="ml-5">
                <Media heading>{leader.name}</Media>
                <h5>{leader.designation}</h5>

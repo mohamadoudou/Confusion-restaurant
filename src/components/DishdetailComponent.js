@@ -75,7 +75,7 @@ class CommentForm extends Component{
         if(props.comments!=null){
            const commentaire=props.comments.map((comment)=>{
                 return(
-                    <Fade in>
+                    <Fade in  key={comment.id}>
                         <ul className="list-unstyled">
                             <li>{comment.comment}</li>
                             <li>--{comment.author}, <Moment format="MMM D YYYY" withTitle>{comment.date}</Moment></li>
@@ -95,7 +95,7 @@ class CommentForm extends Component{
         }
         else{
             return(
-               <div></div>
+               null
             );
         }
     }

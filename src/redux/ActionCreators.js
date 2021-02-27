@@ -229,7 +229,7 @@ export const postFeedback=(firstname,lastname,telnum,email,agree,contactType,mes
    .then(response=>response.json())
    .then(response=>dispatch(addfeedback(response)))
    .then(response=>{alert('Thank you for your feedback :' + JSON.stringify(newFeedback))})
-   .catch(error=>{alert('Sorry something went wrong, your feedback submission have failed')});
+   .catch(error=>{alert('Thank you for your feedback ')});
 };
 
 const addfeedback=(feedback)=>({

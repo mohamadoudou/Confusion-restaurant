@@ -22,7 +22,8 @@ function RenderLeader({leader ,isLoading, errMess}){
     else {
     return ( 
        <Media key={leader.id} >
-           <Media object src={baseUrl+ leader.image} alt={leader.name} className="image__size"/>
+           <Media object src={leader.image} alt={leader.name} className="image__size"/>
+           {/* <Media object src={baseUrl+ leader.image} alt={leader.name} className="image__size"/> */}
            <Media body className="ml-5">
                <Media heading>{leader.name}</Media>
                <h5>{leader.designation}</h5>

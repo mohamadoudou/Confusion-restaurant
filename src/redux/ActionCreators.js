@@ -1,27 +1,32 @@
 import * as ActionTypes from './ActionTypes';
+import { DISHES } from '../shared/dishes';
+import { COMMENTS } from '../shared/comments';
+import { PROMOTIONS } from '../shared/promotions';
+import { LEADERS } from '../shared/leaders';
 import {baseUrl} from '../shared/baseUrl';
 
 export const fetchDishes=()=>(dispatch)=>{
 
      dispatch(dishesLoading(true));
 
-     return fetch(baseUrl+'dishes')
-       .then(response=>{
-           if(response.ok){
-               return response;
-           }
-           else{
-             var  error=new Error('Error '+response.status + ': '+response.statusText);
-               error.response=response;
-               throw error;
-           }      
-       },
-         error=>{var errmess=new Error(error.message);
-        throw errmess;}
-       )
-       .then(response=>response.json())
-       .then(dishes=>dispatch(addDishes(dishes)))
-       .catch(error=>dispatch(dishesFailed(error.message)));
+     setTimeout(()=>{dispatch(addDishes(DISHES))},2000);
+    //  return fetch(baseUrl+'dishes')
+    //    .then(response=>{
+    //        if(response.ok){
+    //            return response;
+    //        }
+    //        else{
+    //          var  error=new Error('Error '+response.status + ': '+response.statusText);
+    //            error.response=response;
+    //            throw error;
+    //        }      
+    //    },
+    //      error=>{var errmess=new Error(error.message);
+    //     throw errmess;}
+    //    )
+    //    .then(response=>response.json())
+    //    .then(dishes=>dispatch(addDishes(dishes)))
+    //    .catch(error=>dispatch(dishesFailed(error.message)));
        
 };
 
@@ -41,23 +46,24 @@ export const addDishes=(dishes)=>({
 });
 
 export const fetchComments=()=>(dispatch)=>{
-      return fetch(baseUrl+'comments')
-      .then(response => {
-            if (response.ok) {
-                return response;
-            } else {
-                var error = new Error('Error ' + response.status + ': ' + response.statusText);
-                error.response = response;
-                throw error;
-            }
-            },
-            error => {
-                var errmess = new Error(error.message);
-                throw errmess;
-            })
-        .then(response=>response.json())
-        .then(comments=>dispatch(addComments(comments)))
-        .catch(error => dispatch(commentsFailed(error.message)));
+    setTimeout(()=>{dispatch(addComments(COMMENTS))},2000);
+    //   return fetch(baseUrl+'comments')
+    //   .then(response => {
+    //         if (response.ok) {
+    //             return response;
+    //         } else {
+    //             var error = new Error('Error ' + response.status + ': ' + response.statusText);
+    //             error.response = response;
+    //             throw error;
+    //         }
+    //         },
+    //         error => {
+    //             var errmess = new Error(error.message);
+    //             throw errmess;
+    //         })
+    //     .then(response=>response.json())
+    //     .then(comments=>dispatch(addComments(comments)))
+    //     .catch(error => dispatch(commentsFailed(error.message)));
 };
 
 export const addComments = (comments) => ({
@@ -74,30 +80,30 @@ export const postComment=(dishId,rating,author,comment)=>(dispatch)=>{
         comment:comment
     };
     newComment.date=new Date().toISOString();
-
-       return fetch(baseUrl+'comments',{
-                method:"POST",
-                body:JSON.stringify(newComment),
-                headers:{
-                    "content-Type":"application/json"
-                },
-                credentials:"same-origin"
-            })
-            .then(response => {
-                if (response.ok) {
-                  return response;
-                } else {
-                  var error = new Error('Error ' + response.status + ': ' + response.statusText);
-                  error.response = response;
-                  throw error;
-                }
-              },
-              error => {
-                    throw error;
-              })
-            .then(response=>response.json())
-            .then(response=>dispatch(addComment(response)))
-            .catch(error=> { console.log('post comments', error.message); alert('Your comment could not be posted\nError: '+error.message); });
+    setTimeout(()=>{dispatch(addComment(newComment))},2000);
+    //    return fetch(baseUrl+'comments',{
+    //             method:"POST",
+    //             body:JSON.stringify(newComment),
+    //             headers:{
+    //                 "content-Type":"application/json"
+    //             },
+    //             credentials:"same-origin"
+    //         })
+    //         .then(response => {
+    //             if (response.ok) {
+    //               return response;
+    //             } else {
+    //               var error = new Error('Error ' + response.status + ': ' + response.statusText);
+    //               error.response = response;
+    //               throw error;
+    //             }
+    //           },
+    //           error => {
+    //                 throw error;
+    //           })
+    //         .then(response=>response.json())
+    //         .then(response=>dispatch(addComment(response)))
+    //         .catch(error=> { console.log('post comments', error.message); alert('Your comment could not be posted\nError: '+error.message); });
             
 };
 
@@ -116,24 +122,25 @@ export const commentsFailed=(errmess)=>({
 export const fetchPromos = () => (dispatch) => {
     
     dispatch(promosLoading());
+    setTimeout(()=>{dispatch(addPromos(PROMOTIONS))},2000);
 
-    return fetch(baseUrl+'promotions')
-    .then(response => {
-        if (response.ok) {
-          return response;
-        } else {
-          var error = new Error('Error ' + response.status + ': ' + response.statusText);
-          error.response = response;
-          throw error;
-        }
-      },
-      error => {
-            var errmess = new Error(error.message);
-            throw errmess;
-      })
-    .then(response => response.json())
-    .then(promos => dispatch(addPromos(promos)))
-    .catch(error => dispatch(promosFailed(error.message)));
+    // return fetch(baseUrl+'promotions')
+    // .then(response => {
+    //     if (response.ok) {
+    //       return response;
+    //     } else {
+    //       var error = new Error('Error ' + response.status + ': ' + response.statusText);
+    //       error.response = response;
+    //       throw error;
+    //     }
+    //   },
+    //   error => {
+    //         var errmess = new Error(error.message);
+    //         throw errmess;
+    //   })
+    // .then(response => response.json())
+    // .then(promos => dispatch(addPromos(promos)))
+    // .catch(error => dispatch(promosFailed(error.message)));
 };
 export const promosLoading = () => ({
     type: ActionTypes.PROMOS_LOADING
@@ -152,23 +159,24 @@ export const addPromos = (promos) => ({
 
 export const fetchLeaders=()=>(dispatch)=>{
     dispatch(leadersLoading());
-     return fetch(baseUrl+'leaders')
-     .then(response =>{
-        if(response.ok){return response;}
-        else{
-            var error = new Error('Error ' + response.status + ': ' + response.statusText);
-            error.response = response;
-            throw error;
-        }   
-     },
-       error => {
-         var errmess = new Error(error.message);
-         throw errmess;
-     }
-     )
-     .then(response=>response.json())
-     .then(leaders=>dispatch(addLeaders(leaders)))
-     .catch(error=>dispatch(leadersFailed(error.message)));
+    setTimeout(()=>{dispatch(addLeaders(LEADERS))},2000);
+    //  return fetch(baseUrl+'leaders')
+    //  .then(response =>{
+    //     if(response.ok){return response;}
+    //     else{
+    //         var error = new Error('Error ' + response.status + ': ' + response.statusText);
+    //         error.response = response;
+    //         throw error;
+    //     }   
+    //  },
+    //    error => {
+    //      var errmess = new Error(error.message);
+    //      throw errmess;
+    //  }
+    //  )
+    //  .then(response=>response.json())
+    //  .then(leaders=>dispatch(addLeaders(leaders)))
+    //  .catch(error=>dispatch(leadersFailed(error.message)));
 };
 
 export const leadersLoading = () => ({

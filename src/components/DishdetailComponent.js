@@ -27,7 +27,6 @@ class CommentForm extends Component{
 
     FormValidator=(values)=>{
         this.toggleModal();
-       // console.log(this.props.addComment(this.props.dishId, values.rating, values.author, values.comment));
     this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
     }
     render(){
@@ -131,7 +130,8 @@ class CommentForm extends Component{
                             exitTransform: 'scale(0.5) translateY(-50%)'
                         }}>
                             <Card key={props.dish.id} >
-                                <CardImg top src={baseUrl + props.dish.image} alt={props.dish.name}/>
+                                {/* <CardImg top src={baseUrl + props.dish.image} alt={props.dish.name}/> */}
+                                <CardImg top src={props.dish.image} alt={props.dish.name}/>
                                 <CardBody>
                                     <CardTitle>{props.dish.name}</CardTitle>
                                     <CardText>{props.dish.description}</CardText>
@@ -159,16 +159,18 @@ class CommentForm extends Component{
                 <div className="row">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
-                        <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
+                        <BreadcrumbItem active>{props.dish?props.dish.name:null}</BreadcrumbItem>
                     </Breadcrumb>
                     <div className="col-12">
-                        <h3>{props.dish.name}</h3>
+                        <h3>{props.dish?props.dish.name:null}</h3>
                         <hr />
                     </div>                
                 </div>
-                <RenderDish dish={props.dish} comments={props.comments}
+                {
+                props.dish?(<RenderDish dish={props.dish} comments={props.comments}
                 postComment={props.postComment}  dishId={props.dish.id}
-                isLoading={props.isLoading} errMess={props.errMess}/>
+                isLoading={props.isLoading} errMess={props.errMess}/>):null
+                }
             </div>
         );
     }

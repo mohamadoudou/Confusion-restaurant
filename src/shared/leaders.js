@@ -1,8 +1,12 @@
+import alberto1 from '../assets/images/alberto1.png'
+import alberto2 from '../assets/images/alberto2.jpg'
+import alberto3 from '../assets/images/alberto3.jpg'
+import alberto4 from '../assets/images/alberto4.jpg'
 export const LEADERS = [
     {
       id: 3,
       name: 'Alberto Somayya',
-      image: '/assets/images/alberto1.png',
+      image: alberto1,
       designation: 'Executive Chef',
       abbr: 'EC',
       featured: true,
@@ -11,7 +15,7 @@ export const LEADERS = [
     {
       id: 1,
       name: 'Dhanasekaran Witherspoon',
-      image: '/assets/images/alberto2.jpg',
+      image: alberto2,
       designation: 'Chief Food Officer',
       abbr: 'CFO',
         featured: false,
@@ -20,7 +24,7 @@ export const LEADERS = [
     {
       id: 2,
       name: 'Agumbe Tang',
-      image: '/assets/images/alberto3.jpg',
+      image: alberto3,
       designation: 'Chief Taste Officer',
       abbr: 'CTO',
         featured: false,
@@ -29,7 +33,7 @@ export const LEADERS = [
     {
       id: 0,
       name: 'Peter Pan',
-      image: '/assets/images/alberto4.jpg',
+      image: alberto4,
       designation: 'Chief Epicurious Officer',
       abbr: 'CEO',
       featured: false,

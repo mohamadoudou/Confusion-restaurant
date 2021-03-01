@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/Confusion-restaurant/static/css/main.14e33765.chunk.css",
-    "main.js": "/Confusion-restaurant/static/js/main.183f54c8.chunk.js",
-    "main.js.map": "/Confusion-restaurant/static/js/main.183f54c8.chunk.js.map",
+    "main.js": "/Confusion-restaurant/static/js/main.0cab1b0b.chunk.js",
+    "main.js.map": "/Confusion-restaurant/static/js/main.0cab1b0b.chunk.js.map",
     "runtime-main.js": "/Confusion-restaurant/static/js/runtime-main.a3e91af7.js",
     "runtime-main.js.map": "/Confusion-restaurant/static/js/runtime-main.a3e91af7.js.map",
     "static/css/2.365913be.chunk.css": "/Confusion-restaurant/static/css/2.365913be.chunk.css",
-    "static/js/2.8ecb9b38.chunk.js": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js",
-    "static/js/2.8ecb9b38.chunk.js.map": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js.map",
+    "static/js/2.341fa851.chunk.js": "/Confusion-restaurant/static/js/2.341fa851.chunk.js",
+    "static/js/2.341fa851.chunk.js.map": "/Confusion-restaurant/static/js/2.341fa851.chunk.js.map",
     "index.html": "/Confusion-restaurant/index.html",
-    "precache-manifest.5ceb4c8ca64ea0479888074cbe593599.js": "/Confusion-restaurant/precache-manifest.5ceb4c8ca64ea0479888074cbe593599.js",
+    "precache-manifest.665ac1744562eb9c9b426081ac4bcce5.js": "/Confusion-restaurant/precache-manifest.665ac1744562eb9c9b426081ac4bcce5.js",
     "service-worker.js": "/Confusion-restaurant/service-worker.js",
     "static/css/2.365913be.chunk.css.map": "/Confusion-restaurant/static/css/2.365913be.chunk.css.map",
     "static/css/main.14e33765.chunk.css.map": "/Confusion-restaurant/static/css/main.14e33765.chunk.css.map",
-    "static/js/2.8ecb9b38.chunk.js.LICENSE.txt": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js.LICENSE.txt",
+    "static/js/2.341fa851.chunk.js.LICENSE.txt": "/Confusion-restaurant/static/js/2.341fa851.chunk.js.LICENSE.txt",
     "static/media/alberto1.png": "/Confusion-restaurant/static/media/alberto1.79e3765d.png",
     "static/media/alberto2.jpg": "/Confusion-restaurant/static/media/alberto2.4b974d35.jpg",
     "static/media/alberto3.jpg": "/Confusion-restaurant/static/media/alberto3.90436015.jpg",
@@ -29,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.a3e91af7.js",
     "static/css/2.365913be.chunk.css",
-    "static/js/2.8ecb9b38.chunk.js",
+    "static/js/2.341fa851.chunk.js",
     "static/css/main.14e33765.chunk.css",
-    "static/js/main.183f54c8.chunk.js"
+    "static/js/main.0cab1b0b.chunk.js"
   ]
 }

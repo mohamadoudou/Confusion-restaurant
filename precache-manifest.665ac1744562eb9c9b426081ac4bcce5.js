@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1763df1bd37200c6163dac900ecd36b4",
+    "revision": "5c0cae7ce293fd69b485691c0221a95d",
     "url": "/Confusion-restaurant/index.html"
   },
   {
-    "revision": "837d402979652667c82f",
+    "revision": "cd4cd297dc61c7573d27",
     "url": "/Confusion-restaurant/static/css/2.365913be.chunk.css"
   },
   {
-    "revision": "1c503f87ed0a34a4967e",
+    "revision": "dcf9decdfabf2da3db4a",
     "url": "/Confusion-restaurant/static/css/main.14e33765.chunk.css"
   },
   {
-    "revision": "837d402979652667c82f",
-    "url": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js"
+    "revision": "cd4cd297dc61c7573d27",
+    "url": "/Confusion-restaurant/static/js/2.341fa851.chunk.js"
   },
   {
     "revision": "1035eb16e0f287e503e9fbe9e7321198",
-    "url": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js.LICENSE.txt"
+    "url": "/Confusion-restaurant/static/js/2.341fa851.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1c503f87ed0a34a4967e",
-    "url": "/Confusion-restaurant/static/js/main.183f54c8.chunk.js"
+    "revision": "dcf9decdfabf2da3db4a",
+    "url": "/Confusion-restaurant/static/js/main.0cab1b0b.chunk.js"
   },
   {
     "revision": "5e10da1e54a001576811",

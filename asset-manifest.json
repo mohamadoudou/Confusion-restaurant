@@ -1,26 +1,36 @@
 {
   "files": {
-    "main.css": "/Confusion-restaurant/static/css/main.d7bd585f.chunk.css",
-    "main.js": "/Confusion-restaurant/static/js/main.65c666cf.chunk.js",
-    "main.js.map": "/Confusion-restaurant/static/js/main.65c666cf.chunk.js.map",
+    "main.css": "/Confusion-restaurant/static/css/main.14e33765.chunk.css",
+    "main.js": "/Confusion-restaurant/static/js/main.183f54c8.chunk.js",
+    "main.js.map": "/Confusion-restaurant/static/js/main.183f54c8.chunk.js.map",
     "runtime-main.js": "/Confusion-restaurant/static/js/runtime-main.a3e91af7.js",
     "runtime-main.js.map": "/Confusion-restaurant/static/js/runtime-main.a3e91af7.js.map",
     "static/css/2.365913be.chunk.css": "/Confusion-restaurant/static/css/2.365913be.chunk.css",
-    "static/js/2.401deb7b.chunk.js": "/Confusion-restaurant/static/js/2.401deb7b.chunk.js",
-    "static/js/2.401deb7b.chunk.js.map": "/Confusion-restaurant/static/js/2.401deb7b.chunk.js.map",
+    "static/js/2.8ecb9b38.chunk.js": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js",
+    "static/js/2.8ecb9b38.chunk.js.map": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js.map",
     "index.html": "/Confusion-restaurant/index.html",
-    "precache-manifest.19c03a7a1f3862d3d4906d94202477e7.js": "/Confusion-restaurant/precache-manifest.19c03a7a1f3862d3d4906d94202477e7.js",
+    "precache-manifest.5ceb4c8ca64ea0479888074cbe593599.js": "/Confusion-restaurant/precache-manifest.5ceb4c8ca64ea0479888074cbe593599.js",
     "service-worker.js": "/Confusion-restaurant/service-worker.js",
     "static/css/2.365913be.chunk.css.map": "/Confusion-restaurant/static/css/2.365913be.chunk.css.map",
-    "static/css/main.d7bd585f.chunk.css.map": "/Confusion-restaurant/static/css/main.d7bd585f.chunk.css.map",
-    "static/js/2.401deb7b.chunk.js.LICENSE.txt": "/Confusion-restaurant/static/js/2.401deb7b.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.css": "/Confusion-restaurant/static/media/fontawesome-webfont.fee66e71.woff"
+    "static/css/main.14e33765.chunk.css.map": "/Confusion-restaurant/static/css/main.14e33765.chunk.css.map",
+    "static/js/2.8ecb9b38.chunk.js.LICENSE.txt": "/Confusion-restaurant/static/js/2.8ecb9b38.chunk.js.LICENSE.txt",
+    "static/media/alberto1.png": "/Confusion-restaurant/static/media/alberto1.79e3765d.png",
+    "static/media/alberto2.jpg": "/Confusion-restaurant/static/media/alberto2.4b974d35.jpg",
+    "static/media/alberto3.jpg": "/Confusion-restaurant/static/media/alberto3.90436015.jpg",
+    "static/media/alberto4.jpg": "/Confusion-restaurant/static/media/alberto4.e41d2c86.jpg",
+    "static/media/buffet.png": "/Confusion-restaurant/static/media/buffet.96d6bd20.png",
+    "static/media/elaicheesecake.png": "/Confusion-restaurant/static/media/elaicheesecake.a1c19f6d.png",
+    "static/media/font-awesome.css": "/Confusion-restaurant/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/logo.png": "/Confusion-restaurant/static/media/logo.eb267f35.png",
+    "static/media/uthappizza.png": "/Confusion-restaurant/static/media/uthappizza.c8fcf9ae.png",
+    "static/media/vadonut.png": "/Confusion-restaurant/static/media/vadonut.986a2644.png",
+    "static/media/zucchipakoda.png": "/Confusion-restaurant/static/media/zucchipakoda.e54b2833.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a3e91af7.js",
     "static/css/2.365913be.chunk.css",
-    "static/js/2.401deb7b.chunk.js",
-    "static/css/main.d7bd585f.chunk.css",
-    "static/js/main.65c666cf.chunk.js"
+    "static/js/2.8ecb9b38.chunk.js",
+    "static/css/main.14e33765.chunk.css",
+    "static/js/main.183f54c8.chunk.js"
   ]
 }
